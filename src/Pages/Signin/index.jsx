@@ -1,12 +1,11 @@
-function Singnin() {
+import Layout from "../../Components/Layout"
 
-return (
-    <>
-    <div className='bg-red-100'>
-        Singnin
-    </div>
-    </>
-)
+function Singnin() {
+    return (
+        <Layout>
+            Singnin
+        </Layout>
+    )
 }
 
 export default Singnin
