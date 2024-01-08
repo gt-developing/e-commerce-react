@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Layout from '../../Components/Layout'
 import Card from '../../Components/Card'
+import ProductDatail from '../../Components/ProductDetail'
 
 function Home() {
     // Creamos un estado local
@@ -21,6 +22,7 @@ function Home() {
                     ))
                 }
             </div>
+            <ProductDatail />
         </Layout>
     )
 }
