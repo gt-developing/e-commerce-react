@@ -3,6 +3,7 @@ import Layout from '../../Components/Layout'
 import Card from '../../Components/Card'
 
 function Home() {
+    // Creamos un estado local
     const [items, setItems] = useState(null)
 
     useEffect (()=> {

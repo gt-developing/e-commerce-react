@@ -1,7 +1,7 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
-const ShoppingCartContext = createContext()
+export const ShoppingCartContext = createContext()
 
 /* Por que usaremos un estado global
 Para que, cuando nuestro proyecto vaya 
@@ -16,8 +16,15 @@ export const ShoppingCartProvider = ({children}) => {
     ShoppingCartProvider.propTypes = {
         children: PropTypes.node.isRequired,
       }
+
+    const [count, setCount] = useState(0)
+    console.log('COUNT: ', count)
+
     return (
-        <ShoppingCartContext.Provider>
+        <ShoppingCartContext.Provider value={{
+            count,
+            setCount,
+        }}>
             {children}
         </ShoppingCartContext.Provider>
     )
