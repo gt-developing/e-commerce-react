@@ -16,14 +16,21 @@ export const ShoppingCartProvider = ({children}) => {
     ShoppingCartProvider.propTypes = {
         children: PropTypes.node.isRequired,
       }
-
+    //estado para contadora
     const [count, setCount] = useState(0)
-    console.log('COUNT: ', count)
+    //estado para abrir y cerrar ProductDatail, entonces recibe un booleano
+    // Product Detail · Open/Close
+    const [isProductDetailOpen, setIsProductDetailOpen] = useState(false)
+    const openProductDetail = () => setIsProductDetailOpen(true)
+    const closeProductDetail = () => setIsProductDetailOpen(false)
 
     return (
         <ShoppingCartContext.Provider value={{
             count,
             setCount,
+            openProductDetail,
+            closeProductDetail,
+            isProductDetailOpen,
         }}>
             {children}
         </ShoppingCartContext.Provider>
