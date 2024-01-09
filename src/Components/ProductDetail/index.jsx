@@ -4,7 +4,7 @@ import './styles.css'
 
 const ProductDetail = () => {
   const context = useContext(ShoppingCartContext)
-  console.log('PRODUCT TO SHOW ', context.productToShow)
+
 
   return (
     <aside
@@ -18,13 +18,13 @@ const ProductDetail = () => {
           </svg>
         </div>
       </div>
-      <div className='flex flex-col px-6'>
+      <div className='flex flex-col p-6'>
         <figure>
               <img className='w-full h-full rounded-lg' 
-              src={context.productToShow.images[0]} 
+              src={context.productToShow.images?.[0]} 
               alt={context.productToShow.title} />
           </figure>
-          <p className='flex flex-col py-6'>
+          <p className='flex flex-col py-3'>
             <span className='font-medium text-2xl mb-2'>${context.productToShow.price}</span>
             <span className='font-medium text-md'>{context.productToShow.title}</span>
             <span className='font-light text-sm'>{context.productToShow.description}</span>
