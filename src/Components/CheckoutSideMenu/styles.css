@@ -12,24 +12,23 @@
   /* Firefox */
   .scrollable-cards {
     scrollbar-width: auto;
-    scrollbar-color: #565CBA #ffffff;
+    scrollbar-color: #141414 #ffffff;
 		/* overflow-x: hidden; */
   }
 
   /* Chrome, Edge, and Safari */
   .scrollable-cards::-webkit-scrollbar {
-    width: 5px;
+    width: 6px;
 		/* overflow-x: hidden; */
   }
 
   .scrollable-cards::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #E4E4E4;
 		/* overflow-x: hidden; */
   }
 
   .scrollable-cards::-webkit-scrollbar-thumb {
-    background-color: #565CBA;
+    background-color: #BCAAF0;
     border-radius: 10px;
-    border: 3px solid #565CBA;
 		/* overflow-x: hidden; */
   }

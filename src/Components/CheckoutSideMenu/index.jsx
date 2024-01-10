@@ -8,7 +8,7 @@ const CheckoutSideMenu = () => {
 
   return (
     <aside
-      className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} top-20 checkout-side-menu scrollable-cards flex-col fixed right-0 border border-gray rounded-lg bg-white`}>
+      className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} top-20 checkout-side-menu scrollable-cards flex-col fixed right-0 border border-black rounded-lg bg-white`}>
       <div className='flex justify-between items-center p-6'>
         <h2 className='font-medium text-xl'>My Order</h2>
         <div onClick={()=> context.closeCheckoutSideMenu()} className='cursor-pointer'>
