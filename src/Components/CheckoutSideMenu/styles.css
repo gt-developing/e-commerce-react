@@ -10,11 +10,7 @@
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
-  .scrollable-cards {
-    scrollbar-width: auto;
-    
-		/* overflow-x: hidden; */
-  }
+  
 
   /* Chrome, Edge, and Safari */
   .scrollable-cards::-webkit-scrollbar {
