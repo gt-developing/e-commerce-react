@@ -1,8 +1,6 @@
 # Tienda Online con React.js
 
-![Vista Previa 1](https://i.imgur.com/VRnhHf2.png)
-![Vista Previa 2](https://i.imgur.com/2SAcL5U.png)
-![Vista Previa 3](https://i.imgur.com/t7RmCXy.png)
+![Vista Previa 1](https://i.imgur.com/2SAcL5U.png)
 
 ## Descripción
 
@@ -18,11 +16,9 @@ La tienda en línea proporciona funcionalidades como:
 
 ## Vista Previa
 
-![Vista Previa 1](https://i.imgur.com/VRnhHf2.png)
+![Vista Previa 1](https://i.imgur.com/2SAcL5U.png)
 
-![Vista Previa 2](https://i.imgur.com/2SAcL5U.png)
-
-![Vista Previa 3](https://i.imgur.com/t7RmCXy.png)
+![Vista Previa 2](https://i.imgur.com/t7RmCXy.png)
 
 ## Instalación
 
@@ -31,6 +27,7 @@ La tienda en línea proporciona funcionalidades como:
 ```bash
 git clone https://tu-repositorio.git
 cd tu-proyecto
+```
 
 # React + Vite
 
