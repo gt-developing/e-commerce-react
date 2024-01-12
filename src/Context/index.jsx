@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 export const ShoppingCartContext = createContext()
@@ -38,6 +38,18 @@ export const ShoppingCartProvider = ({children}) => {
     // ShoppingCart · Order
     const [order, setOrder] = useState([])
 
+    // Creamos un estado local
+    const [items, setItems] = useState(null)
+
+    useEffect (()=> {
+        fetch('https://api.escuelajs.co/api/v1/products')
+            .then(response => response.json())
+            .then(data => setItems(data))
+    }, [])
+
+    //Estado para el buscador
+    const { searchValue, setSearchValue } = useState(null);
+
     return (
         <ShoppingCartContext.Provider value={{
             count,
@@ -53,7 +65,11 @@ export const ShoppingCartProvider = ({children}) => {
             closeCheckoutSideMenu,
             isCheckoutSideMenuOpen,
             order,
-            setOrder
+            setOrder,
+            items,
+            setItems,
+            searchValue,
+            setSearchValue
         }}>
             {children}
         </ShoppingCartContext.Provider>
