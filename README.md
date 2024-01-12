@@ -1,3 +1,37 @@
+# Tienda Online con React.js
+
+![Vista Previa 1](https://i.imgur.com/VRnhHf2.png)
+![Vista Previa 2](https://i.imgur.com/2SAcL5U.png)
+![Vista Previa 3](https://i.imgur.com/t7RmCXy.png)
+
+## Descripción
+
+Este proyecto es una Tienda Online desarrollada con React.js. Se utiliza Vite.js para el entorno de desarrollo, TailwindCSS para el manejo de estilos y React Router DOM para gestionar las rutas y la navegación. Los datos de productos se obtienen de la API Platzi Fake Store.
+
+La tienda en línea proporciona funcionalidades como:
+
+- Filtrado de productos por título y categoría.
+- Consulta de detalles de un producto.
+- Agregado de productos al carrito de compras.
+- Proceso de checkout.
+- Revisión del historial de compras.
+
+## Vista Previa
+
+![Vista Previa 1](https://i.imgur.com/VRnhHf2.png)
+
+![Vista Previa 2](https://i.imgur.com/2SAcL5U.png)
+
+![Vista Previa 3](https://i.imgur.com/t7RmCXy.png)
+
+## Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://tu-repositorio.git
+cd tu-proyecto
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
