@@ -30,7 +30,7 @@ function Home() {
         }
       }
     
-      //ESTO ES LO QUE VA PERO AHORA NO FUNCIONA PORQUE ESTA ROTA LA API 
+      //ESTO ES LO QUE VA PORQUE AHORA NO FUNCIONA PORQUE ESTA ROTA LA API 
       /* const renderView = () => {
         if (context.filteredItems?.length > 0) {
           return (

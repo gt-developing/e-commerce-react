@@ -20,14 +20,9 @@ La tienda en línea proporciona funcionalidades como:
 
 ![Vista Previa 2](https://i.imgur.com/t7RmCXy.png)
 
-## Instalación
+## Enlace a la Aplicación
 
-1. Clona el repositorio:
-
-```bash
-git clone https://tu-repositorio.git
-cd tu-proyecto
-```
+Puedes visualizar la aplicación desplegada [aquí](https://shoppiecommerce.netlify.app/)
 
 # React + Vite
 
