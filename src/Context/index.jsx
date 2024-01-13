@@ -3,6 +3,27 @@ import PropTypes from 'prop-types'
 
 export const ShoppingCartContext = createContext()
 
+export const initializeLocalStorage = () => {
+  const accountInLocalStorage = localStorage.getItem('account')
+  const signOutInLocalStorage = localStorage.getItem('sign-out')
+  let parsedAccount
+  let parsedSignOut
+
+  if (!accountInLocalStorage) {
+    localStorage.setItem('account', JSON.stringify({}))
+    parsedAccount = {}
+  } else {
+    parsedAccount = JSON.parse(accountInLocalStorage)
+  }
+
+  if (!signOutInLocalStorage) {
+    localStorage.setItem('sign-out', JSON.stringify(false))
+    parsedSignOut = false
+  } else {
+    parsedSignOut = JSON.parse(signOutInLocalStorage)
+  }
+}
+
 /* Por que usaremos un estado global
 Para que, cuando nuestro proyecto vaya 
 aumentando su complejidad, no sé vuelva tedioso estar 
@@ -16,7 +37,14 @@ export const ShoppingCartProvider = ({children}) => {
     ShoppingCartProvider.propTypes = {
         children: PropTypes.node.isRequired,
       }
-    //Shopping Cart · Increment quantity
+    
+    //My account
+    const [account, setAccount] = useState({})
+
+    //My account
+    const [signOut, setSignOut] = useState(false)
+
+      //Shopping Cart · Increment quantity
     const [count, setCount] = useState(0)
     //estado para abrir y cerrar ProductDatail, entonces recibe un booleano
     // Product Detail · Open/Close
@@ -112,7 +140,11 @@ export const ShoppingCartProvider = ({children}) => {
             setSearchByTitle,
             filteredItems,
             searchByCategory,
-            setSearchByCategory
+            setSearchByCategory,
+            account,
+            setAccount,
+            signOut,
+            setSignOut
         }}>
             {children}
         </ShoppingCartContext.Provider>

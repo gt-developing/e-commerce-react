@@ -6,6 +6,12 @@ const Navbar = () => {
     //con este hook le digo que lea el estado global
     const context = useContext(ShoppingCartContext)
     const activeStyle= 'underline underline-offset-4'
+
+    const handleSignOut = () => {
+        const stringifiedSignOut = JSON.stringify (true)
+        localStorage.setItem('sign-out', stringifiedSignOut)
+        context.setSignOut(true)
+    }
     return (
         <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
             {/* Navbar izquierda */}
@@ -58,39 +64,39 @@ const Navbar = () => {
                 <li>
                 {/* Cada NavLink para cada elemento de mi navbar */}
                 <NavLink
-                    to='/furnitures'
-                    onClick={() => context.setSearchByCategory('furnitures')}
+                    to='/furniture'
+                    onClick={() => context.setSearchByCategory('furniture')}
                     className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Furnitures
+                    Furniture
                 </NavLink>
                 </li>
 
                 <li>
                 {/* Cada NavLink para cada elemento de mi navbar */}
                 <NavLink
-                    to='/toys'
-                    onClick={() => context.setSearchByCategory('toys')}
+                    to='/shoes'
+                    onClick={() => context.setSearchByCategory('shoes')}
                     className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Toys
+                    Shoes
                 </NavLink>
                 </li>
 
                 <li>
                 {/* Cada NavLink para cada elemento de mi navbar */}
                 <NavLink
-                    to='/others'
-                    onClick={() => context.setSearchByCategory('others')}
+                    to='/miscellaneous'
+                    onClick={() => context.setSearchByCategory('miscellaneous')}
                     className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Others
+                    Miscellaneous
                 </NavLink>
                 </li>
             </ul>
@@ -133,7 +139,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                         }
-                    >
+                    onClick={() => handleSignOut()}>
                     Sign in
                 </NavLink>
                 </li>
