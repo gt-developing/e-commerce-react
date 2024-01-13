@@ -7,43 +7,20 @@ import ProductDatail from '../../Components/ProductDetail'
 function Home() {
 
     const context = useContext(ShoppingCartContext)
-
-    const renderView = () => {
-        if (context.searchByTitle?.length > 0) {
-          if (context.filteredItems?.length > 0) {
-            return (
-              context.filteredItems?.map(item => (
-                <Card key={item.id} data={item} />
-              ))
-            )
-          } else {
-            return (
-              <div>No Results Found</div>
-            )
-          }
-        } else {
-          return (
-            context.items?.map(item => (
-              <Card key={item.id} data={item} />
-            ))
-          )
-        }
-      }
     
-      //ESTO ES LO QUE VA PORQUE AHORA NO FUNCIONA PORQUE ESTA ROTA LA API 
-      /* const renderView = () => {
-        if (context.filteredItems?.length > 0) {
-          return (
-            context.filteredItems?.map(item => (
-              <Card key={item.id} data={item} />
-            ))
-          )
-        } else {
-          return (
-            <div>No Results Found</div>
-          )
-        }
-      } */
+    const renderView = () => {
+      if (context.filteredItems?.length > 0) {
+        return (
+          context.filteredItems?.map(item => (
+            <Card key={item.id} data={item} />
+          ))
+        )
+      } else {
+        return (
+          <div>No Results Found</div>
+        )
+      }
+    } 
     
     return (
         <Layout>
