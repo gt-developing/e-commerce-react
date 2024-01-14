@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 export const ShoppingCartContext = createContext()
 
+//Lo guardamos en localStorage porque es una información que va a persistir en el tiempo
+//Lo vamos a utilizar en el estado global
 export const initializeLocalStorage = () => {
   const accountInLocalStorage = localStorage.getItem('account')
   const signOutInLocalStorage = localStorage.getItem('sign-out')
@@ -38,10 +40,8 @@ export const ShoppingCartProvider = ({children}) => {
         children: PropTypes.node.isRequired,
       }
     
-    //My account
+    //My account | Crear estados globales de account y sign-out
     const [account, setAccount] = useState({})
-
-    //My account
     const [signOut, setSignOut] = useState(false)
 
       //Shopping Cart · Increment quantity
