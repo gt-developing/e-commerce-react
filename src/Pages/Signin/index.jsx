@@ -11,7 +11,6 @@ function SignIn() {
     //Account
     const account = localStorage.getItem('account')
     const parsedAccount = JSON.parse(account)
-
     //Has an account
     const noAccountInLocalStorage = parsedAccount ? Object.keys(parsedAccount).length === 0 : true
     const noAccountInLocalState = context.account ? Object.keys(context.account).length === 0 : true

@@ -12,6 +12,14 @@ const Navbar = () => {
     const parsedSignOut = JSON.parse(signOut)
     const isUserSignOut = context.signOut || parsedSignOut
 
+    //Account
+    const account = localStorage.getItem('account')
+    const parsedAccount = JSON.parse(account)
+    //Has an account
+    const noAccountInLocalStorage = parsedAccount ? Object.keys(parsedAccount).length === 0 : true
+    const noAccountInLocalState = context.account ? Object.keys(context.account).length === 0 : true
+    const hasUserAnAccount = !noAccountInLocalStorage || !noAccountInLocalState
+
     //Hacer función de SignOut en el componente de Navbar
     const handleSignOut = () => {
         const stringifiedSignOut = JSON.stringify (true)
@@ -20,7 +28,7 @@ const Navbar = () => {
     }
 
     const renderView = () => {
-        if (isUserSignOut) {
+        if (hasUserAnAccount && !isUserSignOut) {
             return (
             <li>
                 <NavLink
@@ -84,7 +92,7 @@ const Navbar = () => {
             <ul className='flex items-center gap-3'>
                 <li className='font-semibold text-lg'>
                 {/* Cada NavLink para cada elemento de mi navbar */}
-                <NavLink to='/'>
+                <NavLink to={`${isUserSignOut ? '/sign-in' : '/'}`}>
                     Shopi
                 </NavLink>
                 </li>
