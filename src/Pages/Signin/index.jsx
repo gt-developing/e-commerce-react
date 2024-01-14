@@ -29,19 +29,16 @@ function SignIn() {
                 </p>
                 <Link to="/">
                     <button 
-                        className='bg-indigo-500 text-white w-full rounded-lg py-3 mt-4'
+                        className='bg-indigo-500 disabled:bg-indigo-200 text-white w-full rounded-lg py-3 mt-4'
                         disabled={!hasUserAnAccount}>
                             Log in
-                    </button>
-                    <button
-                        className='bg-black disabled:bg-black/40 text-white  w-full rounded-lg'>   
                     </button>
                 </Link>
                 <div className='text-center'>
                     <a className='font-light text-xs underline underline-offset-4' href='/'>Forgot my password</a>
                 </div>
                 <button 
-                    className='border-2 border-indigo-500 w-full rounded-lg mt-6 py-3'
+                    className='border-2 border-indigo-500 disabled:text-black/40 disabled:border-indigo-200 w-full rounded-lg mt-6 py-3'
                     onClick={() => setView('create-user-info')}
                     disabled={hasUserAnAccount}>
                         Sign up
