@@ -32,8 +32,12 @@ function SignIn() {
 			email: formData.get('email'),
 			password: formData.get('password')
 		}
-    // TODO: Remove this console.log 🥲
-		console.log(data)
+        // Create account
+		const stringifiedAccount = JSON.stringify(data)
+        localStorage.setItem('account', stringifiedAccount)
+        context.setAccount(data)
+        //Sign In
+        handleSignIn()
 	}
 
     const renderLognIn = () => {
@@ -50,6 +54,7 @@ function SignIn() {
                 <Link to="/">
                     <button 
                         className='bg-indigo-500 disabled:bg-indigo-200 text-white w-full rounded-lg py-3 mt-4'
+                        onClick={() => handleSignIn()}
                         disabled={!hasUserAnAccount}>
                             Log in
                     </button>
@@ -77,7 +82,7 @@ function SignIn() {
                   id="name"
                   name="name"
                   defaultValue={parsedAccount?.name}
-                  placeholder="Peter"
+                  placeholder="Amanda"
                   className='rounded-lg border-2 border-indigo-500 placeholder:font-light
                   placeholder:text-sm placeholder:text-black/60 focus:outline-none py-2 px-4'
                 />
@@ -89,7 +94,7 @@ function SignIn() {
                   id="email"
                   name="email"
                   defaultValue={parsedAccount?.email}
-                  placeholder="hi@helloworld.com"
+                  placeholder="hi@email.com"
                   className='rounded-lg border-2 border-indigo-500
                   placeholder:font-light placeholder:text-sm placeholder:text-black/60 focus:outline-none py-2 px-4'
                 />
