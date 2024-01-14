@@ -31,58 +31,44 @@ const Navbar = () => {
     const renderView = () => {
         if (hasUserAnAccount && !isUserSignOut) {
             return (
-            <li>
-                <NavLink
-                to="/sign-in"
-                className={({ isActive }) => isActive ? activeStyle : undefined }
-                onClick={() => handleSignOut()}>
-                Sign out
-                </NavLink>
-            </li>
+                <>
+                <li className='text-black/60'>
+                  {parsedAccount?.email}
+                </li>
+                <li>
+                  <NavLink
+                    to='/my-orders'
+                    className={({ isActive }) => isActive ? activeStyle : undefined}>
+                    My Orders
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/my-account'
+                    className={({ isActive }) => isActive ? activeStyle : undefined}>
+                    My Account
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to='/sign-in'
+                    className={({ isActive }) => isActive ? activeStyle : undefined}
+                    onClick={() => handleSignOut()}>
+                    Sign out
+                  </NavLink>
+                </li>
+              </>
             )
         } else {
             return (
-                <>
-                    <li className='text-black/60'>
-                        sutarabrenda@gmail.com
-                    </li>
-
-                    <li>
-                    {/* Cada NavLink para cada elemento de mi navbar */}
+                <li>
                     <NavLink
-                        to='/my-orders'
-                        className={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                            }
-                        >
-                        My Orders
-                    </NavLink>
-                    </li>
-
-                    <li>
-                    {/* Cada NavLink para cada elemento de mi navbar */}
-                    <NavLink
-                        to='/my-account'
-                        className={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                            }
-                        >
-                        My Account
-                    </NavLink>
-                    </li>
-
-                    <li>
-                    {/* Cada NavLink para cada elemento de mi navbar */}
-                    <NavLink
-                        to='/sign-in'
-                        className={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                            }
+                        to="/sign-in"
+                        className={({ isActive }) => isActive ? activeStyle : undefined }
                         onClick={() => handleSignOut()}>
                         Sign in
                     </NavLink>
-                    </li>
-                </>
+                </li>
             )
         }
     }
