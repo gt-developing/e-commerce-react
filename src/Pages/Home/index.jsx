@@ -17,7 +17,7 @@ function Home() {
         )
       } else {
         return (
-          <div>No Results Found</div>
+          <div>No resultados</div>
         )
       }
     } 
@@ -25,11 +25,11 @@ function Home() {
     return (
         <Layout>
             <div className='flex items-center relative justify-center w-80 mb-4'>
-                <h1 className='font-medium text-xl'>Exclusive Products</h1>
+                <h1 className='font-medium text-xl'>Productos exclusivos</h1>
             </div>
             <input 
                 type='text' 
-                placeholder="Search a products"
+                placeholder="Buscar productos"
                 className='w-80 mb-4 p-3 border-2 border-indigo-500 rounded-lg focus:outline-none'
                 onChange={(event) => context.setSearchByTitle(event.target.value)}
             />

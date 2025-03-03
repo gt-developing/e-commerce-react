@@ -20,7 +20,7 @@ function MyOrder() {
                         </svg>
                     </div>
                 </Link>
-                <h1 className='font-medium text-xl'>My Order</h1>
+                <h1 className='font-medium text-xl'>Mi pedido</h1>
             </div>
             <div className='flex flex-col w-80'>
                 {

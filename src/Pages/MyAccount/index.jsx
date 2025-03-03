@@ -27,17 +27,17 @@ function MyAccount() {
     return (
       <div className='flex flex-col w-80'>
         <p className='flex flex-col mb-6'>
-          <span className='font-normal text-sm mb-2'>Name: </span>
+          <span className='font-normal text-sm mb-2'>Nombre: </span>
           <span className='bg-gray-100 text-black rounded-lg h-10 p-2 font-normal'>{parsedAccount?.name}</span>
         </p>
         <p className='flex flex-col mb-6'>
-          <span className='font-normal text-sm mb-2'>Email: </span>
+          <span className='font-normal text-sm mb-2'>Correo: </span>
           <span className='bg-gray-100 text-black rounded-lg h-10 p-2 font-normal'>{parsedAccount?.email}</span>
         </p>
         <button
           className='border-2 border-indigo-500 w-full rounded-lg mt-6 py-3'
           onClick={() => setView('edit-user-info')}>
-          Edit
+          Editar
         </button>
       </div>
     )
@@ -47,7 +47,7 @@ function MyAccount() {
     return (
       <form ref={form} className='flex flex-col gap-4 w-80'>
         <div className='flex flex-col gap-1'>
-          <label htmlFor="name" className='font-light text-sm'>Your name:</label>
+          <label htmlFor="name" className='font-light text-sm'>Tu nombre:</label>
           <input
             type="text"
             id="name"
@@ -58,7 +58,7 @@ function MyAccount() {
           />
         </div>
         <div className='flex flex-col gap-1'>
-          <label htmlFor="email" className='font-light text-sm'>Your email:</label>
+          <label htmlFor="email" className='font-light text-sm'>tu correo:</label>
           <input
             type="text"
             id="email"
@@ -69,7 +69,7 @@ function MyAccount() {
           />
         </div>
         <div className='flex flex-col gap-1'>
-          <label htmlFor="password" className='font-light text-sm'>Your password:</label>
+          <label htmlFor="password" className='font-light text-sm'>Tu contraseña:</label>
           <input
             type="text"
             id="password"
@@ -82,7 +82,7 @@ function MyAccount() {
         <button
           className='bg-indigo-500 text-white w-full rounded-lg py-3 mt-4'
           onClick={() => {setView('user-info'), editAccount()}}>
-          Ready!
+          Listo!
         </button>
       </form>
     )
@@ -92,7 +92,7 @@ function MyAccount() {
 
   return (
     <Layout>
-      <h1 className="font-medium text-xl text-center mb-6 w-80">My account</h1>
+      <h1 className="font-medium text-xl text-center mb-6 w-80">Mi cuenta</h1>
       {renderView()}
     </Layout>
   )

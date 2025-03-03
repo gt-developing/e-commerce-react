@@ -29,7 +29,7 @@ const CheckoutSideMenu = () => {
     <aside
       className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'}  top-20 checkout-side-menu flex-col fixed right-0 border border-gray rounded-lg bg-white`}>
       <div className='flex justify-between items-center p-6'>
-        <h2 className='font-medium text-xl'>My Order</h2>
+        <h2 className='font-medium text-xl'>Mi pedido</h2>
         <div onClick={()=> context.closeCheckoutSideMenu()} className='cursor-pointer'>
           <svg 
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -58,7 +58,7 @@ const CheckoutSideMenu = () => {
         </p>
         <Link to='/my-orders/last'>
           <button className='bg-indigo-500 text-white w-full h-10 rounded-lg' onClick={()=> handleCheckout()}>
-            Checkout
+            Pagar
           </button>
         </Link>
       </div>

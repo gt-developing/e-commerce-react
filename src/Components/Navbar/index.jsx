@@ -39,14 +39,14 @@ const Navbar = () => {
                   <NavLink
                     to='/my-orders'
                     className={({ isActive }) => isActive ? activeStyle : undefined}>
-                    My Orders
+                    Mis pedidos
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     to='/my-account'
                     className={({ isActive }) => isActive ? activeStyle : undefined}>
-                    My Account
+                    Mi cuenta
                   </NavLink>
                 </li>
                 <li>
@@ -54,7 +54,7 @@ const Navbar = () => {
                     to='/sign-in'
                     className={({ isActive }) => isActive ? activeStyle : undefined}
                     onClick={() => handleSignOut()}>
-                    Sign out
+                    Salir
                   </NavLink>
                 </li>
               </>
@@ -66,7 +66,7 @@ const Navbar = () => {
                         to="/sign-in"
                         className={({ isActive }) => isActive ? activeStyle : undefined }
                         onClick={() => handleSignOut()}>
-                        Sign in
+                        Iniciar sesion
                     </NavLink>
                 </li>
             )
@@ -80,7 +80,7 @@ const Navbar = () => {
                 <li className='font-semibold text-lg'>
                 {/* Cada NavLink para cada elemento de mi navbar */}
                 <NavLink to={`${isUserSignOut ? '/sign-in' : '/'}`}>
-                    Shopi
+                    Drunk Glasses
                 </NavLink>
                 </li>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    All
+                    Todo
                 </NavLink>
                 </li>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Clothes
+                    Lentes
                 </NavLink>
                 </li>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Electronics
+                    Graduaciones
                 </NavLink>
                 </li>
 
@@ -131,7 +131,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Furniture
+                    Ropa
                 </NavLink>
                 </li>
 
@@ -144,7 +144,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Shoes
+                    Accesorios
                 </NavLink>
                 </li>
 
@@ -157,7 +157,7 @@ const Navbar = () => {
                         isActive ? activeStyle : undefined
                         }
                     >
-                    Miscellaneous
+                    Sobre nosotros
                 </NavLink>
                 </li>
             </ul>

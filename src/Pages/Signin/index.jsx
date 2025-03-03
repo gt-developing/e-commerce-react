@@ -43,11 +43,11 @@ function SignIn() {
         return (
             <div className='flex flex-col w-80'>
                 <p className='flex flex-col mb-6'>
-                    <span className='font-normal text-sm mb-2'>Email: </span>
+                    <span className='font-normal text-sm mb-2'>Correo: </span>
                     <span className='bg-gray-100 text-gray-500 rounded-lg h-10 p-2 font-light'>{parsedAccount?.email}</span>
                 </p>
                 <p className='flex flex-col'>
-                    <span className='font-normal text-sm mb-2'>Password: </span>
+                    <span className='font-normal text-sm mb-2'>Contraseña: </span>
                     <span className='bg-gray-100 text-gray-500 rounded-lg h-10 p-2 font-light'>{parsedAccount?.password}</span>
                 </p>
                 <Link to="/">
@@ -55,17 +55,17 @@ function SignIn() {
                         className='bg-indigo-500 disabled:bg-indigo-200 text-white w-full rounded-lg py-3 mt-4'
                         onClick={() => handleSignIn()}
                         disabled={!hasUserAnAccount}>
-                            Log in
+                            Iniciar sesion
                     </button>
                 </Link>
                 <div className='text-center'>
-                    <a className='font-light text-xs underline underline-offset-4' href='/'>Forgot my password</a>
+                    <a className='font-light text-xs underline underline-offset-4' href='/'>Olvide mi contraseña</a>
                 </div>
                 <button 
                     className='border-2 border-indigo-500 disabled:text-black/40 disabled:border-indigo-200 w-full rounded-lg mt-6 py-3'
                     onClick={() => setView('create-user-info')}
                     disabled={hasUserAnAccount}>
-                        Sign up
+                        Registrarte
                 </button>
             </div>
         )
@@ -75,7 +75,7 @@ function SignIn() {
         return (
             <form ref={form} className='flex flex-col gap-4 w-80'>
               <div className='flex flex-col gap-1'>
-                <label htmlFor="name" className='font-normal text-sm mb-2'>Your name:</label>
+                <label htmlFor="name" className='font-normal text-sm mb-2'>Nombre:</label>
                 <input
                   type="text"
                   id="name"
@@ -87,7 +87,7 @@ function SignIn() {
                 />
               </div>
               <div className='flex flex-col gap-1'>
-                <label htmlFor="email" className='font-normal text-sm mb-2'>Your email:</label>
+                <label htmlFor="email" className='font-normal text-sm mb-2'>Email:</label>
                 <input
                   type="text"
                   id="email"
@@ -99,7 +99,7 @@ function SignIn() {
                 />
               </div>
               <div className='flex flex-col gap-1'>
-                <label htmlFor="password" className='font-normal text-sm mb-2'>Your password:</label>
+                <label htmlFor="password" className='font-normal text-sm mb-2'>Crear contraseña:</label>
                 <input
                   type="text"
                   id="password"
@@ -114,7 +114,7 @@ function SignIn() {
                 <button
                   className='bg-indigo-500 text-white w-full rounded-lg py-3 mt-4'
                   onClick={() => createAnAccount()}>
-                  Create
+                  Crear
                 </button>
               </Link>
             </form>
@@ -125,7 +125,7 @@ function SignIn() {
 
   return (
     <Layout>
-      <h1 className="font-medium text-xl text-center mb-6 w-80">Welcome</h1>
+      <h1 className="font-medium text-xl text-center mb-6 w-80">Bienvenido</h1>
       {renderView()}
     </Layout>
   )
